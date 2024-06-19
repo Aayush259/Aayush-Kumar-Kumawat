@@ -53,7 +53,7 @@ h1::first-letter{
     list-style-type:none;
 }
 
-.nav a{
+.nav a,.githubLink{
     position:relative;
     display:inline-block;
     color:#FFF;
@@ -64,16 +64,16 @@ h1::first-letter{
     transition:all 0.2s ease-in-out;
 }
 
-.nav a.active{
+.nav a.active,.githubLink{
     color:rgb(56 189 248);
     font-weight:500;
 }
 
-.nav a:hover{
+.nav a:hover,.githubLink:hover{
     color:#ffffffcb;
 }
 
-.nav a::after{
+.nav a::after,.githubLink::after{
     content:' ';
     position:absolute;
     left:50%;
@@ -83,7 +83,7 @@ h1::first-letter{
     transition:all 0.2s ease-in-out;
 }
 
-.nav a:hover::after{
+.nav a:hover::after,.githubLink:hover::after{
     left:0;
     width:100%;
     border-color:rgb(56 189 248);
@@ -133,20 +133,20 @@ h1::first-letter{
     border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
-.skillSection,.projectSection{
+.skillSection,.projectSection,.aboutSection{
     font-family:Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding:0.8rem;
 }
 
 /* ------------------------------------------------------------------------ */
-.skillSection>p,.projectSection>p{
+.skillSection>p,.projectSection>p,.aboutSection>p{
     margin:2rem auto 2rem auto;
     font-size:2rem;
     width:fit-content;
     position:relative;
 }
 
-.skillSection>p::after,.projectSection>p::after{
+.skillSection>p::after,.projectSection>p::after,.aboutSection>p::after{
     content:' ';
     position:absolute;
     bottom:-3px;
@@ -157,13 +157,13 @@ h1::first-letter{
     transition:all 0.2s ease-in-out;
 }
 
-.skillSection>p:hover::after,.projectSection>p:hover::after{
+.skillSection>p:hover::after,.projectSection>p:hover::after,.aboutSection>p:hover::after{
     left:50%;
     width:0;
     border-color:transparent;
 }
 
-.skillCardContainer,.projectSectionContainer{
+.skillCardContainer,.projectSectionContainer,.testimonialContainer{
     width:100%;
     max-width:1200px;
     justify-content:space-around;
@@ -174,7 +174,7 @@ h1::first-letter{
     gap:2rem;
 }
 
-.skillCard,.project{
+.skillCard,.project,.testimonial{
     width:220px;
     min-height:200px;
     max-width:96vw;
@@ -204,7 +204,7 @@ h1::first-letter{
     border-radius:0.5rem;
 }
 
-.project{
+.project,.testimonial{
     padding:0.2rem;
     width:550px;
     text-decoration:none;
@@ -234,6 +234,36 @@ h1::first-letter{
     border-radius:3px;
     line-height:1.5;
     color:#7dd3fc;
+}
+
+.about{
+    width:95%;
+    max-width:1200px;
+    margin:1.4rem auto;
+}
+
+.about,.testimonial{
+    font-size:1.2rem;
+    line-height:1.5;
+}
+
+.testimonial{
+    padding:1rem;
+    padding-bottom:2.5rem;
+    position:relative;
+    background-color:#7dd3fc26;
+    border-left:4px solid rgb(56 189 248);
+}
+
+.testimonial .name{
+    position:absolute;
+    bottom:10px;
+    right:20px;
+    color:#7dd3fc;
+}
+
+.testimonialImage{
+    transform:rotate(180deg);
 }
 
 @media only screen and (max-width:1100px){
