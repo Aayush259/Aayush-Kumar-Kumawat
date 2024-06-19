@@ -17,7 +17,7 @@ body{
     align-items:center;
 }
 
-button{
+button,a{
     cursor:pointer;
 }
 
@@ -29,7 +29,7 @@ button{
     width:100%;
     padding:1rem 1.5rem;
     border-bottom:1px solid #cbd5e11a;
-    background-color:rgba(15, 23, 42, 0.8);
+    background-color:rgba(15, 23, 42, 0.9);
 }
 
 h1{
@@ -138,8 +138,9 @@ h1::first-letter{
     padding:0.8rem;
 }
 
+/* ------------------------------------------------------------------------ */
 .skillSection>p,.projectSection>p{
-    margin:2rem auto;
+    margin:2rem auto 2rem auto;
     font-size:2rem;
     width:fit-content;
     position:relative;
@@ -162,7 +163,7 @@ h1::first-letter{
     border-color:transparent;
 }
 
-.skillCardContainer{
+.skillCardContainer,.projectSectionContainer{
     width:100%;
     max-width:1200px;
     justify-content:space-around;
@@ -173,7 +174,7 @@ h1::first-letter{
     gap:2rem;
 }
 
-.skillCard{
+.skillCard,.project{
     width:220px;
     min-height:200px;
     max-width:96vw;
@@ -186,15 +187,52 @@ h1::first-letter{
     color:rgb(148 163 184);
 }
 
-.skillCard img{
+.skillCard img,.project img{
     max-width:98%;
 }
 
 .skillCard p{
     font-size:1.2rem;
     margin:1rem auto;
+    line-height:1.4;
     letter-spacing:0.8px;
     padding:0.8rem;
+    color:#7dd3fc;
+}
+
+.project img{
+    border-radius:0.5rem;
+}
+
+.project{
+    padding:0.2rem;
+    width:550px;
+    text-decoration:none;
+}
+
+.project:hover{
+    opacity:0.8;
+}
+
+.projectName{
+    width:100%;
+    margin-top:1.5rem;
+    padding-left:1.25rem;
+    font-size:1.3rem;
+    font-weight:600;
+    letter-spacing:1px;
+    color:#FFF;
+}
+
+.projectDesc{
+    height:100%;
+    margin-top:0.7rem;
+    padding:0.4rem 0.9rem;
+    font-size:1.1rem;
+    background-color:#7dd3fc26;
+    border-left:4px solid rgb(56 189 248);
+    border-radius:3px;
+    line-height:1.5;
     color:#7dd3fc;
 }
 
