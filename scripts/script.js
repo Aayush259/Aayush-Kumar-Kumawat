@@ -81,7 +81,7 @@ navLinks.forEach((navLink) => {
         // When the page is scrolled after clicking the link, show the header.
         setTimeout(() => {
             document.addEventListener('scroll', showHeader);
-        }, 0);
+        }, 1000);
 
     });
 });
