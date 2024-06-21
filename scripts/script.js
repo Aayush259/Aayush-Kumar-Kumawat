@@ -6,7 +6,7 @@ const nav = document.querySelector('nav');
 const navLinks = document.querySelectorAll('.nav a');
 
 // Getting all sections.
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('.section');
 
 // Highlights the links whose sections are in the viewport.
 const observer = new IntersectionObserver(
@@ -50,6 +50,11 @@ hamburger.addEventListener('click', (e) => {
 
 // This function deactivates hamburger.
 const deActivateHamBurger = () => {
+
+    if (window.scrollY === 0) {
+        document.querySelector('a[href="#"]').classList.add('active');
+    }
+
     if (hamburger.classList.contains('activeHam')) {
         hamburger.classList.remove('activeHam');
         nav.classList.remove('activeNav');
@@ -70,7 +75,7 @@ navLinks.forEach((navLink) => {
         // This function displays header.
         const showHeader = () => {
             document.querySelector('.header').style.top = '0';
-            document.removeEventListener('scroll', hideHeader);
+            document.removeEventListener('scroll', showHeader);
         };
 
         // When the page is scrolled after clicking the link, show the header.
