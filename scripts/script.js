@@ -5,6 +5,41 @@ const nav = document.querySelector('nav');
 // Getting all nav links.
 const navLinks = document.querySelectorAll('.nav a');
 
+// Getting all sections.
+const sections = document.querySelectorAll('section');
+
+// Highlights the links whose sections are in the viewport.
+const observer = new IntersectionObserver(
+
+    entries => {
+        entries.forEach(entry => {
+            // entry.target.classlist.toggle('active', entry.isIntersecting);
+            // console.log(entry.target);
+            const id = entry.target.id;
+            // console.log(id);
+            const navLink = document.querySelector(`a[href="#${id}"]`);
+
+            if (entry.isIntersecting) {
+                navLinks.forEach(navLink => {
+                    navLink.classList.remove('active');
+                })
+                navLink.classList.add('active');
+            } else {
+                navLink.classList.remove('active');
+            }
+        })
+    },
+    {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    }
+);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
 // When hamburger is clicked, display navlinks by toggling a class.
 hamburger.addEventListener('click', (e) => {
     e.stopPropagation();
