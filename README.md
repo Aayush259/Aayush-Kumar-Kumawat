@@ -1,6 +1,6 @@
 # Aayush Kumar Kumawat - Portfolio
 
-Welcome to my portfolio website! This is a showcase of my skills, projects, and experiences as a Frontend Developer.
+✨ You can see my work as a Frontend Developer, including my projects, skills, and achievements. Take a look and let me know what you think!
 
 ## Table of Contents
 
