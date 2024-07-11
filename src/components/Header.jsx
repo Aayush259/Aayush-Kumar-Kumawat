@@ -1,11 +1,42 @@
-import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../styles/Header.css';
 
 export default function Header() {
 
-    // Location (URL) reference.
-    const location = useLocation();
+    useEffect(() => {
+        // Getting hamburger button and nav elements.
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        // When hamburger is clicked, display or hide navlinks by toggling a class.
+        const toggleNav = (e) => {
+            e.stopPropagation();
+
+            // Updating classes of nav and hamburger.
+            hamburger.classList.toggle('activeHam');
+            nav.classList.toggle('activeNav');
+        };
+
+        // This function deactivates hamburger.
+        const deActivateHamBurger = () => {
+            if (hamburger.classList.contains('activeHam')) {
+                hamburger.classList.remove('activeHam');
+                nav.classList.remove('activeNav');
+            };
+        }
+
+        // Activate hamburger when it is clicked & Deactivate hamburger when clicked or scrolled in document.
+        document.addEventListener('click', deActivateHamBurger);
+        document.addEventListener('scroll', deActivateHamBurger);
+        hamburger.addEventListener('click', toggleNav);
+
+        return () => {
+            document.removeEventListener('click', deActivateHamBurger);
+            document.removeEventListener('scroll', deActivateHamBurger);
+            hamburger.removeEventListener('click', toggleNav);
+        }
+    }, []);
 
     return (
         <header className="header flex">
@@ -13,9 +44,9 @@ export default function Header() {
             <nav className="nav flex">
                 <li>
                     <NavLink
-                        to={'/Aayush-Kumar-Kumawat'}
+                        to={'/Aayush-Kumar-Kumawat/'}
                         end
-                        className={({ isActive }) => isActive || location.pathname === '/Aayush-Kumar-Kumawat/' ? 'active': 'notActive'}
+                        className={({ isActive }) => isActive ? 'active' : 'notActive'}
                     >
                         Home
                     </NavLink>
@@ -23,7 +54,7 @@ export default function Header() {
 
                 <li>
                     <NavLink to={'/Aayush-Kumar-Kumawat/skills'}
-                        className={({isActive}) => isActive ? 'active': 'notActive'}
+                        className={({ isActive }) => isActive ? 'active' : 'notActive'}
                     >
                         Skills
                     </NavLink>
@@ -31,7 +62,7 @@ export default function Header() {
 
                 <li>
                     <NavLink to={'/Aayush-Kumar-Kumawat/projects'}
-                        className={({isActive}) => isActive ? 'active': 'notActive'}
+                        className={({ isActive }) => isActive ? 'active' : 'notActive'}
                     >
                         Projects
                     </NavLink>
@@ -40,7 +71,7 @@ export default function Header() {
                 <li>
                     <NavLink
                         to={'/Aayush-Kumar-Kumawat/about'}
-                        className={({isActive}) => isActive ? 'active': 'notActive'}
+                        className={({ isActive }) => isActive ? 'active' : 'notActive'}
                     >
                         About
                     </NavLink>
