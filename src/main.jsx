@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import IntroSection from './components/IntroSection.jsx';
-import SkillSection from './components/SkillSection.jsx';
-import ProjectSection from './components/ProjectSection.jsx';
-import AboutSection from './components/AboutSection.jsx';
-import ContactSection from './components/ContactSection.jsx';
+import App from './App.jsx';
+import Loader from './components/Loader.jsx';
+const IntroSection = lazy(() => import('./components/IntroSection.jsx'));
+const SkillSection = lazy(() => import('./components/SkillSection.jsx'));
+const ProjectSection = lazy(() => import('./components/ProjectSection.jsx'));
+const AboutSection = lazy(() => import('./components/AboutSection.jsx'));
+const ContactSection = lazy(() => import('./components/ContactSection.jsx'));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Suspense fallback={<Loader />}>
+      <RouterProvider router={router} />
+    </Suspense>
   </React.StrictMode>,
 );
