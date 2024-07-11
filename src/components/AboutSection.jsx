@@ -20,6 +20,7 @@ export default function AboutSection() {
         <section id="about" className="section aboutSection">
             <p>About</p>
             <div className="about">
+                <p style={{margin: '1.2rem auto'}}>So, you made it this far into my website. Hopefully you find it interesting!</p>
                 <p style={{marginBottom: '1rem'}}>I'm a tech enthusiast 💻 and a passionate coder with strong foundation in JavaScript and React. I have a knack for creating dynamic and responsive web applications that provide excellent user experiences. My projects on <a className="githubLink" style={{paddingTop: '0', paddingBottom: '0'}} href="https://github.com/Aayush259" target="_blank">GitHub</a> tell more about my skills and learning journey, so don't forget to check it out!</p>
                 <p>I am currently pursuing my bachelor's degree at University Maharaja College 👑, Jaipur, where I am in my first year. This combination of formal education and independent learning has equipped me with a solid foundation in web development, and I am continuously striving to enhance my skills and build dynamic, responsive web applications.</p>
             </div>
