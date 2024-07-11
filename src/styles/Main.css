@@ -1,0 +1,151 @@
+
+.skillSection,.projectSection,.aboutSection,.contactSection{
+    font-family:var(--font-family-primary);
+}
+
+.contactSection{
+    margin-top:4rem;
+}
+
+.skillSection>p,.projectSection>p,.aboutSection>p,.contactSection>p{
+    margin:0.5rem auto 0.5rem auto;
+    font-size:2rem;
+    width:fit-content;
+    position:relative;
+}
+
+.skillSection>p::after,.projectSection>p::after,.aboutSection>p::after,.contactSection>p::after{
+    content:' ';
+    position:absolute;
+    bottom:-3px;
+    left:0;
+    width:100%;
+    border:solid 2px var(--accent-color);
+    border-radius:10px;
+    transition:all 0.2s ease-in-out;
+}
+
+.skillSection>p:hover::after,.projectSection>p:hover::after,.aboutSection>p:hover::after,.contactSection>p:hover::after{
+    left:50%;
+    width:0;
+    border-color:transparent;
+}
+
+.skillCardContainer,.projectSectionContainer,.testimonialContainer,.connectCardContainer{
+    width:100%;
+    max-width:1200px;
+    justify-content:space-around;
+    align-items:stretch;
+    flex-wrap:wrap;
+    margin:2rem auto;
+    margin-top:3rem;
+    gap:2rem;
+}
+
+.skillCard,.project,.testimonial,.connectCard{
+    width:220px;
+    min-height:200px;
+    max-width:96vw;
+    padding:0 0.2rem;
+    flex-direction:column;
+    justify-content:flex-start;
+    border:1px solid var(--border-color);
+    border-radius:8px;
+    background-color:rgb(30 41 59);
+    color:var(--secondary-color);
+}
+
+.skillCard img,.project img{
+    max-width:98%;
+}
+
+.skillCard p{
+    font-size:1.2rem;
+    margin:1rem auto;
+    line-height:1.4;
+    letter-spacing:0.8px;
+    padding:0.8rem;
+    color:#7dd3fc;
+}
+
+.project img{
+    border-radius:0.5rem;
+}
+
+.project,.testimonial{
+    padding:0.2rem;
+    width:550px;
+}
+
+.project:hover{
+    opacity:0.8;
+}
+
+.projectName{
+    width:100%;
+    margin-top:1.5rem;
+    padding-left:1.25rem;
+    font-size:1.3rem;
+    font-weight:600;
+    letter-spacing:1px;
+    color:var(--text-color);
+}
+
+.projectDesc{
+    height:100%;
+    margin-top:0.7rem;
+    padding:0.4rem 0.9rem;
+    font-size:1.1rem;
+    border-radius:3px;
+    line-height:1.5;
+}
+
+.about{
+    width:95%;
+    max-width:1200px;
+    margin:1.4rem auto;
+}
+
+.about,.testimonial{
+    font-size:1.2rem;
+    line-height:1.5;
+}
+
+.testimonial{
+    padding:1rem;
+    padding-bottom:2.5rem;
+    position:relative;
+    background-color:#7dd3fc26;
+    border-left:4px solid var(--accent-color);
+}
+
+.testimonial .name{
+    position:absolute;
+    bottom:10px;
+    right:20px;
+    color:#7dd3fc;
+}
+
+.testimonialImage{
+    transform:rotate(180deg);
+}
+
+.connectCard{
+    background-color:transparent;
+    border:none;
+}
+
+.connectCard:hover{
+    opacity:0.8;
+}
+
+.connectCard img{
+    display:block;
+    margin:0rem auto 2rem auto;
+}
+
+@media only screen and (max-width:1100px){
+    .skillSection>p{
+        font-size:1.6rem;
+    }
+}

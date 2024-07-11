@@ -1,0 +1,131 @@
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:99;
+    justify-content:space-between;
+    width:100%;
+    padding:1rem 1.5rem;
+    border-bottom:1px solid var(--border-color);
+    background-color:rgba(15, 23, 42, 0.9);
+    transition:all 0.3s ease-in-out;
+}
+
+h1{
+    font-family:var(--font-family-secondary);
+    font-weight:500;
+    font-size:1.6rem;
+}
+
+h1::first-letter{
+    font-family:var(--font-family-tertiary);
+    font-size:2.5rem;
+}
+
+.nav{
+    gap:20px;
+    font-size:1.2rem;
+    font-family:var(--font-family-primary);
+}
+
+.nav li{
+    list-style-type:none;
+}
+
+.nav a,.githubLink,.connectCard a{
+    position:relative;
+    display:inline-block;
+    color:var(--text-color);
+    padding:8px 15px;
+    border-radius:8px;
+    letter-spacing:1px;
+    transition:all 0.2s ease-in-out;
+}
+
+.nav a.active,.githubLink{
+    color:var(--accent-color);
+}
+
+.nav a:hover,.githubLink:hover,.connectCard a:hover{
+    color:#ffffffcb;
+}
+
+.nav a::after,.githubLink::after,.connectCard a::after{
+    content:' ';
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:0%;
+    border:solid 1px transparent;
+    transition:all 0.2s ease-in-out;
+}
+
+.nav a:hover::after,.githubLink:hover::after,.connectCard a:hover::after{
+    left:0;
+    width:100%;
+    border-color:var(--accent-color);
+}
+
+.hamburger{
+    background-color:transparent;
+    border:none;
+    flex-direction:column;
+    display:none;
+}
+
+.hamburger .bar{
+    margin-top:5px;
+    width:30px;
+    height:3px;
+    background-color:var(--text-color);
+    border-radius:2px;
+    transition:all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width:900px){
+    .nav{
+        height:0;
+        padding:0;
+        overflow:hidden;
+        position:absolute;
+        right:0;
+        top:100%;
+        z-index:-100;
+        flex-direction:column;
+        align-items:flex-start;
+        border:1px solid transparent;
+        border-radius:0 0 0 0.5rem;
+        background-color:transparent;
+        box-shadow:inset 0 1px 0 0 #ffffff0d;
+    }
+
+    .nav li a{
+        width:180px;
+        font-weight:500;
+        color:var(--secondary-color);
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .activeHam .bar:nth-child(2){
+        opacity:0;
+    }
+
+    .activeHam .bar:nth-child(1){
+        transform:rotate(45deg) translateY(11px);
+    }
+
+    .activeHam .bar:nth-child(3){
+        transform:rotate(-45deg) translateY(-11px);
+    }
+
+    .activeNav{
+        padding:0.5rem;
+        height:auto;
+        z-index:999;
+        border-color:var(--border-color);
+        background-color:rgba(30, 41, 59, 0.88);
+    }
+}
