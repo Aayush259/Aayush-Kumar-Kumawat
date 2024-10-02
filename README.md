@@ -11,7 +11,7 @@
 
 ## About
 
-I'm Aayush Kumar Kumawat, a tech enthusiast and passionate coder with a strong foundation in JavaScript and React. I'm currently pursuing my bachelor's degree at University Maharaja College, Jaipur. This combination of formal education and independent learning has equipped me with solid foundation in web development, and I'm continuously striving to enhance my skills and build dynamic, responsive web applications.
+I'm Aayush Kumar Kumawat, a tech enthusiast and passionate coder with a strong foundation in JavaScript and React. I'm continuously striving to enhance my skills and build dynamic, responsive web applications.
 
 ## Skills
 
