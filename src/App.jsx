@@ -8,7 +8,7 @@ export default function App() {
 
   // Redirect to new portfolio on page load.
   useEffect(() => {
-    window.location.replace('https://aayush259.netlify.app/');
+    window.location.replace('https://aayush259.vercel.app/');
   }, []);
 
   return (
