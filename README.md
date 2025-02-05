@@ -1,17 +1,9 @@
 # Aayush Kumar Kumawat - Portfolio
 
-✨ You can see my work as a Frontend Developer, including my projects, skills, and achievements. Take a look and let me know what you think!
+I'm Aayush Kumar Kumawat, a tech enthusiast 💻 and a passionate coder with a strong foundation in TypeScript, JavaScript, React, and Next.js. I love building dynamic, responsive, and user-friendly web applications that deliver seamless experiences.
+I have worked on a variety of projects, including full-stack applications, where I handled everything from frontend design to backend functionality. My focus is always on writing clean, efficient code and continuously improving my skills to tackle new challenges.
 
-## Table of Contents
-
-- [About](#about)
-- [Skills](#skills)
-- [Projects](#projects)
-- [Contact](#contact)
-
-## About
-
-I'm Aayush Kumar Kumawat, a tech enthusiast and passionate coder with a strong foundation in JavaScript and React. I'm continuously striving to enhance my skills and build dynamic, responsive web applications.
+✨ You can see my work as a Full Stack Developer, including my projects, skills, and achievements. Take a look and let me know what you think!
 
 ## Skills
 
