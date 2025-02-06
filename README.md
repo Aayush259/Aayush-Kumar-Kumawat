@@ -16,6 +16,9 @@ I have worked on a variety of projects, including full-stack applications, where
 
 Here are some of the projects I've worked on:
 
+### [💬 Square](https://square-vl8y.onrender.com/)
+A real-time chat application which allows users to connect, chat, and manage profiles with seamless updates and an intuitive user interface.
+
 ### [📙 Dictionary](https://aayush259.github.io/Dictionary/)
 A React-based web app designed to help users look up words, view their definitions, phonetics, and example sentences with theme toggling and history tracking features.
 
