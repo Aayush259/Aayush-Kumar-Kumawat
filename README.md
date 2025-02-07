@@ -19,7 +19,7 @@ Here are some of the projects I've worked on:
 ### [💬 Square](https://square-vl8y.onrender.com/)
 A real-time chat application which allows users to connect, chat, and manage profiles with seamless updates and an intuitive user interface.
 
-### [🎧 Sound (Sphere]https://aayush259.github.io/E-Commerce/)
+### [🎧 Sound (Sphere](https://aayush259.github.io/E-Commerce/)
 Sound Sphere is a full-stack e-commerce application that provides a seamless, interactive experience for browsing and purchasing audio products.
 
 ### [📙 Dictionary](https://aayush259.github.io/Dictionary/)
